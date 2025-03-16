@@ -4,96 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard - Dangana School</title>
-    <link rel="stylesheet" href="dashboard.css">
-    <script defer src="dashboard.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
-    <!-- Sidebar Navigation -->
     <div class="sidebar">
         <h2 class="logo">Dangana School</h2>
         <ul>
-            <li><a href="#home" class="active">🏠 Dashboard</a></li>
+            <li><a href="#home">🏠 Dashboard</a></li>
             <li><a href="#courses">📚 My Courses</a></li>
             <li><a href="#grades">📊 Grades</a></li>
-            <li><a href="#schedule">📅 Schedule</a></li>
-            <li><a href="#resources">📂 Resources</a></li>
-            <li><a href="#profile">👤 Profile</a></li>
             <li><a href="#" onclick="logout()">🚪 Logout</a></li>
         </ul>
     </div>
 
-    <!-- Main Content -->
     <div class="main-content">
         <header>
             <h2>Welcome, <span id="studentName">Student</span>!</h2>
         </header>
-
+        
         <section id="home">
             <h2>Dashboard Overview</h2>
             <p>Check your latest updates, assignments, and school announcements.</p>
-        </section>
-
-        <section id="courses">
-            <h2>My Courses</h2>
-            <div class="course-container">
-                <div class="course">
-                    <h3>Mathematics</h3>
-                    <p>Instructor: Mr. Adams</p>
-                    <button>View Course</button>
-                </div>
-                <div class="course">
-                    <h3>Science</h3>
-                    <p>Instructor: Mrs. Johnson</p>
-                    <button>View Course</button>
-                </div>
-                <div class="course">
-                    <h3>English</h3>
-                    <p>Instructor: Ms. Smith</p>
-                    <button>View Course</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="grades">
-            <h2>Recent Grades</h2>
-            <table>
-                <tr>
-                    <th>Course</th>
-                    <th>Assignment</th>
-                    <th>Grade</th>
-                </tr>
-                <tr>
-                    <td>Mathematics</td>
-                    <td>Algebra Test</td>
-                    <td>A</td>
-                </tr>
-                <tr>
-                    <td>Science</td>
-                    <td>Biology Project</td>
-                    <td>B+</td>
-                </tr>
-                <tr>
-                    <td>English</td>
-                    <td>Essay Writing</td>
-                    <td>A-</td>
-                </tr>
-            </table>
-        </section>
-
-        <section id="schedule">
-            <h2>My Schedule</h2>
-            <p>Upcoming classes and events.</p>
-        </section>
-
-        <section id="resources">
-            <h2>Resources</h2>
-            <p>Download course materials and important documents.</p>
-        </section>
-
-        <section id="profile">
-            <h2>My Profile</h2>
-            <p>View and update your student details.</p>
         </section>
     </div>
 
