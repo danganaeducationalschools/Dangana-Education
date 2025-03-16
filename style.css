@@ -62,7 +62,7 @@ nav {
     height: 100vh;
     text-align: center;
     color: white;
-    background-image: url('your-background-image.jpg'); /* Change to your actual image */
+    background-image: url('banner.jpg'); /* Change to your actual image */
     background-size: cover;
     background-position: center;
 }
