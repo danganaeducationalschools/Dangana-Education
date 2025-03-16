@@ -45,8 +45,8 @@ nav {
     color: white;
 }
 
-.hero h1 {
-    font-size: 36px;
+.hero h1, .hero p {
+    color: #222; /* Change from white to dark for better readability */
 }
 
 .hero .btn {
@@ -85,3 +85,25 @@ footer {
     padding: 20px;
     margin-top: 20px;
 }
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #002147;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
