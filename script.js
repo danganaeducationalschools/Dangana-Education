@@ -63,6 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (menuIcon) {
         menuIcon.addEventListener("click", function () {
             navLinks.classList.toggle("active");
+            function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+}
+function closeMenu() {
+    document.querySelector(".nav-links").classList.remove("active");
+}
         });
 
         // Close menu when clicking outside
