@@ -1,4 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Handle login
+    const loginForm = document.getElementById("loginForm");
+    if (loginForm) {
+        loginForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Dummy User Data (Replace with PHP Backend)
+            const users = [
+                { email: "student@example.com", password: "student123", role: "student" },
+                { email: "admin@example.com", password: "admin123", role: "admin" }
+            ];
+
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (user) {
+                sessionStorage.setItem("user", JSON.stringify(user));
+                window.location.href = user.role === "admin" ? "admin.html" : "dashboard.html";
+            } else {
+                document.getElementById("loginMessage").innerText = "Invalid email or password!";
+            }
+        });
+    }
+
+    // Handle Dashboard Redirects
+    const user = JSON.parse(sessionStorage.getItem("user"));
+    if (!user) {
+        window.location.href = "login.html"; // Redirect if not logged in
+    } else {
+        const nameSpan = document.getElementById("studentName");
+        if (nameSpan) nameSpan.textContent = user.email.split("@")[0];
+    }
+});
+
+// Logout Function
+function logout() {
+    sessionStorage.removeItem("user");
+    window.location.href = "login.html";
+}
     // Smooth Scrolling for Navigation Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
